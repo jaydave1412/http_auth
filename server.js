@@ -14,7 +14,7 @@ const app = require('express')();
 const server = http.createServer(app);
 
 app.get('/',authConnect(basic),(req,res)=>{
-    res.send("hello world")
+    res.send(req.user)
 })
 
 server.listen(3000,()=>{
